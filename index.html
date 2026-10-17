@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="it"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LOBINA — VENT'ANNI | Invito privato</title>
+<meta name="description" content="27 novembre 2026 · Lobina VENT'ANNI · Release party e fundraising per il nuovo disco · 30 posti.">
+<meta name="theme-color" content="#101313">
+<meta property="og:type" content="website"><meta property="og:title" content="LOBINA — VENT'ANNI">
+<meta property="og:description" content="27 novembre 2026 · Release party e fundraising per il nuovo disco · 30 posti.">
+<meta property="og:url" content="https://norm-z.github.io/VENTANNI/">
+<meta property="og:image" content="https://norm-z.github.io/VENTANNI/poster.png">
+<meta property="og:image:width" content="1254"><meta property="og:image:height" content="1254">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{color-scheme:dark;--bg:#101313;--cream:#f0e2cf;--muted:#b7bdb8;--accent:#cd6449}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
+main{width:min(100%,620px);margin:auto;padding:18px 16px 42px}
+.hero img{display:block;width:100%;height:auto;border-radius:2px}
+.counter{padding:28px 14px 16px;margin-top:18px;text-align:center;border-top:1px solid #f0e2cf22}
+.eyebrow{text-transform:uppercase;letter-spacing:.23em;font-size:12px;color:var(--muted)}
+.number{font-size:clamp(72px,20vw,120px);font-weight:300;line-height:1;letter-spacing:-.09em;font-variant-numeric:tabular-nums;margin-top:4px}
+.number.drop{animation:drop .48s ease-out}@keyframes drop{from{transform:translateY(-12px);opacity:.45}to{transform:translateY(0);opacity:1}}
+.caption{font-size:15px;margin:8px 0 24px;color:#e2d4c3;line-height:1.45}
+button{cursor:pointer;border:0;font-weight:700;letter-spacing:.10em;font-size:16px;min-height:58px;border-radius:2px;padding:16px 22px;width:100%;max-width:365px;background:var(--accent);color:#111313}
+button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+button:disabled{background:#394240;color:#ddd;cursor:default}
+.next{display:none;max-width:385px;margin:20px auto 0}.next.show{display:block}
+.next p{font-family:Georgia,serif;font-size:19px;line-height:1.5;margin:0 0 14px}
+.next a{display:block;background:var(--cream);color:var(--bg);padding:17px 14px;text-decoration:none;font-weight:700;letter-spacing:.05em;border-radius:2px}
+small{display:block;max-width:430px;margin:22px auto 0;line-height:1.55;color:#aab3ae;font-size:12px;text-align:center}
+.note{max-width:430px;margin:12px auto 0;color:#b8bfba;line-height:1.5;font-size:13px}
+@media(prefers-reduced-motion:reduce){.number.drop{animation:none}}
+</style></head>
+<body><main>
+<div class="hero"><img src="poster.png" alt="Lobina, VENT'ANNI. Release party e fundraising, 27 novembre 2026, Genova, Sussone Guitars."></div>
+<section class="counter" aria-live="polite">
+<div class="eyebrow">Un invito, un gesto</div><div class="number" id="count">30</div>
+<div class="caption" id="caption">posti nell'invito</div><button id="join">IO CI SARÒ</button>
+<div class="next" id="next"><p>Hai fatto il primo passo.<br>Ora conferma il tuo posto su WhatsApp.</p><a id="whatsapp" target="_blank" rel="noopener noreferrer">CONFERMA SU WHATSAPP ↗</a></div>
+<div class="note">Il numero è simbolico e cambia solo su questo dispositivo. Il posto è confermato soltanto dopo la risposta degli organizzatori.</div>
+</section><small>Invito privato · 27 novembre 2026 · Sussone Guitars, Piazza Campetto 1 interno 4, Genova</small></main>
+<script>
+(()=>{const b=document.getElementById('join'),n=document.getElementById('count'),c=document.getElementById('caption'),a=document.getElementById('next'),w=document.getElementById('whatsapp');
+let doneAlready=false;try{doneAlready=localStorage.getItem('ventanni-gesto-v2')==='yes'}catch(e){}
+function done(){n.textContent='29';n.classList.remove('drop');void n.offsetWidth;n.classList.add('drop');c.textContent='Il tuo gesto è contato. La conferma arriva su WhatsApp.';b.textContent='GESTO FATTO';b.disabled=true;a.classList.add('show');w.href='https://wa.me/?text='+encodeURIComponent("Ciao! Ho ricevuto l’invito per LOBINA — VENT'ANNI del 27 novembre. Vorrei confermare un posto: è ancora disponibile?")}
+b.addEventListener('click',()=>{if(doneAlready)return;doneAlready=true;try{localStorage.setItem('ventanni-gesto-v2','yes')}catch(e){}done()});if(doneAlready)done()})();
+</script></body></html>
